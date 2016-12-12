@@ -1,5 +1,12 @@
 
-const Alphabet = "abcdeifghijklmnopqrstuvwxyz"; // a string of all letter; index counts from 0
+const Alphabet = "abcdefghijklmnopqrstuvwxyz"; // a string of all letter; index counts from 0
+let arrayToString = function(arr){
+  string = ""; //make an empty string
+  for(i=0;i<arr.length; i++){ // for loop, does the same thing for all elements in array
+    string += arr[i]; // push the element with i index to the string
+  }
+  return string;
+}
 const caesarShift = function(str, amount){
 
   let arrayCipher = [];
@@ -12,18 +19,8 @@ const caesarShift = function(str, amount){
  // store this new collection of letter in the array, them we will transform it to a string
   let newIndex = indexOfLetter + amount
   arrayCipher[i] = Alphabet.charAt(newIndex); //push to array the new letters;
-  console.log(arrayCipher[i]);
-  console.log(arrayToString(arrayCipher));
-
+  // console.log(arrayCipher[i]);
 }
-
+console.log(arrayToString(arrayCipher));
 }
 caesarShift("saten", 5);
-
-const arrayToString = function(arr){
-  string = ""; //make an empty string
-  for(i=0;i<arr.length; i++){ // for loop, does the same thing for all elements in array
-    string += arr[i]; // push the element with i index to the string
-  }
-  return string;
-}
